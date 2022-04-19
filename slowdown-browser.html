@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: lightblue;">
+
+<head>
+    <style>
+        .on {
+            color: limegreen;
+        }
+
+        .off {
+            color: red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Something</h1>
+    <input type="button" id="test" value=" clik" onclick="myFun()">
+    <p id="con"></p>
+
+    <p>
+        <ul>
+            <li>
+                dev toolbar open: icon is <span class="on">green</span>
+            </li>
+            <li>
+                dev toolbar closed: icon is <span class="off">red</span>
+            </li>
+        </ul>
+    </p>
+    <div id="devtool-status"><i class="fas fa-7x fa-power-off"></i></div>
+    <br />
+    <p><b>Now press F12 to see if this works for your browser!</b></p>
+
+
+    <script>
+        //devtools
+        setTimeout(function () {
+            while (true) {
+                eval("debugger");
+            }
+        }, 0);
+
+        //devtools
+        // var checkStatus;
+
+        // var element = document.createElement('any');
+        // element.__defineGetter__('id', function () {
+        //     checkStatus = 'on';
+        // });
+
+        // setInterval(function () {
+        //     checkStatus = 'off';
+        //     console.log(element);
+        //     console.clear();
+        // }, 1000);
+
+        //devtools
+        // r = /./
+        // r.toString = function () {
+        //     document.title = '1'
+        // }
+        // console.log('%c', r);
+
+        // //devtools
+        // var checkStatus;
+        // var element = new Image();
+        // Object.defineProperty(element, 'id', {
+        //     get: function () {
+        //         checkStatus = 'on';
+        //         throw new Error("Dev tools checker");
+        //     }
+        // });
+        // requestAnimationFrame(function check() {
+        //     checkStatus = 'off';
+        //     console.dir(element);
+        //     document.querySelector('#devtool-status').innerHTML = checkStatus;
+        //     requestAnimationFrame(check);
+        // });
+        //////////////////////////////
+
+
+        function myFun() {
+            let width = screen.availWidth
+            let height = screen.availHeight
+            let currentW = window.innerWidth
+            let currentH = window.innerHeight
+            let cliH = document.documentElement.clientHeight
+            let cliW = document.documentElement.clientWidth
+            document.getElementById('con').innerHTML = 'Width = ' + width + ', height = ' + height +
+                '<br>Current width = ' + currentW + ', current height = ' + currentH + '<br>Client width = ' + cliW +
+                ', client height = ' + cliH + '<br>' + window.outerHeight
+            console.log(window.outerHeight)
+        }
+    </script>
+</body>
+
+</html>

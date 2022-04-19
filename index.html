@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style1.css" rel="stylesheet" type="text/css">
+    <link href="style2.css" rel="alternate stylesheet" type="text/css" title="print b/w">
+    <script type="text/javascript" src="math.js"></script>
+    <title>Document</title>
+</head>
+<body style="border: 1px solid black;">
+
+
+
+    <input type="file" id="imgg">
+    <div id="ress"></div>
+    <input type="button" onclick="showImg()" value='Click'><br>
+    Height <input type="number" id="h"><br>
+    Width  <input type="number" id='w' ><br>
+    <input type="button" value="Apply" onclick="applyImg()">
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    first: <input type="text" id="var1" > <input type="checkbox" id="cb1">
+
+
+
+
+    <table >
+        <tr >
+            <td rowspan="5">Alpha</td>
+            <td colspan="5">Beta</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Gamma</td>
+            <td colspan="2">Tilda</td>
+            <td colspan="2">Lambda</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Zeta</td>
+            <td colspan="2">Delta</td>
+            <td colspan="2">Theta</td>
+        </tr>
+        <tr>
+            <td colspan="2">Omega</td>
+            <td colspan="2">Kappa</td>
+        </tr>
+    </table>
+    
+
+
+    <audio style="width: 500px;" controls>
+        <source src="audio.aac">
+        Your browser etc.
+    </audio>
+    <input type="button" onclick="playe()" value="play"><br>
+    <input type="button" onclick="pause()" value="pause"><br>
+    <input type="button" onclick="loop()" value="loop"><br>
+    <input type="button" onclick="mute()" value="mute"><br>
+    <input type="button" onclick="unmute()" value="unmute"><br>
+    <input type="button" onclick="controls()" value="controls"><br>
+    <input type="button" onclick="autoPlay()" value="auto"><br>
+    <input type="button" onclick="small()" value="small"><br>
+    <input type="button" onclick="speedup()" value="speed"><br>
+    <input type="button" onclick="slowdown()" value="slow"><br>
+    <input  type="text" id="test1" placeholder="here"><br>
+    <input type="text" id="test2">
+    <a href="?max-age=232" style="font-size: 60pt;">click</a>
+
+    <video width="500" id="vid"  muted>
+        <source src="miui.mp4">
+        your browser
+    </video>
+
+	<div id='abdo'></div>
+
+    <script src="js.js"></script>
+</body>
+</html>

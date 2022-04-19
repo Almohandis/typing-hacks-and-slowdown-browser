@@ -1,0 +1,42 @@
+<input id="hhhj" type="text">
+<script>
+    //alert(0)
+
+    // alert(divList[97].innerText)
+    document.getElementById('hhhj').value = divList[12].querySelector('td').querySelector('div').querySelector('div').innerText
+    sum = 0;
+    //alert(divList[200].className)/////////////////////// Table
+    // for (i in divList) {
+    //     sum++
+    //     //classes = divList[i].className
+    //     if (divList[i].className == 'hhh')
+    //         break
+    // }
+    let text;
+    document.documentElement.addEventListener('click', () => {
+        divList = document.getElementsByTagName('table')
+        text = divList[12].querySelector('td').querySelector('div').querySelector('div').innerText
+    })
+    input = document.getElementsByTagName('input')[0]
+    input.addEventListener('click', async function () {
+        for (let i = 0; i < text.length - 2; i++) {
+            let event = new KeyboardEvent('keypress', {
+                view: window,
+                key: text[i],
+                bubbles: true,
+                cancelable: true,
+                charCode: text[i].charCodeAt(0),
+            })
+            await setTimeout(() => {
+                input.dispatchEvent(event)
+            }, 500);
+        }
+    })
+
+    input.addEventListener('keypress', e => {
+        input.value += e.key
+    })
+</script>
+</body>
+
+</html>

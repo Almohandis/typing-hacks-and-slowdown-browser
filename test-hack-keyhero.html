@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <a href="http://keyhero.com/profile/jimmy159/?ba" title="jimmy159's typing test profile"><img src="https://www.keyhero.com/static//badges/1105/typing-test-331545.png" alt="jimmy159's typing test WPM" style="vertical-align:middle"></a>
+    <div>Hello there</div>
+    <script>
+        let xx = 1;
+        let message = document.querySelector('div');
+        let test2 = document.querySelector('input')
+        async function hello3() {
+            wordChars = message.innerHTML
+            for (let i = 0; i < wordChars.length; i++) {
+                let eventr = new KeyboardEvent('keypress', {
+                    view: window,
+                    key: wordChars[i],
+                    bubbles: true,
+                    cancelable: true,
+                    charCode: wordChars[i].charCodeAt(0),
+                })
+                test2.dispatchEvent(eventr);
+            }
+            if (xx == 4)
+                return
+            else
+                change();
+        }
+        test2.addEventListener('click', function () {
+            setTimeout(() => {
+                hello3();
+            }, 1000);
+        })
+        test2.addEventListener('keypress', e => {
+            test2.value += e.key
+        })
+
+        function change() {
+            document.querySelector('div').innerHTML = ' Hi though' + xx;
+            xx++;
+            hello3();
+        }
+        //message.addEventListener('change', hello3)
+
+        // setTimeout(() => {
+        //     document.querySelector('div').innerHTML = ' Hi though';
+        // }, 3000);
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+    </script>
+</body>
+
+</html>
